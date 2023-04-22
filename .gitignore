@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyCharm project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# VS Code settings
+.vscode/
+
+.env
+
