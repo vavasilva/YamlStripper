@@ -2,7 +2,7 @@ import os
 import yaml
 from tempfile import NamedTemporaryFile
 
-from yaml_stripper import remove_fields
+from YamlStripper.yaml_stripper import remove_fields
 
 
 def test_remove_fields():
