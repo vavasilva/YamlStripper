@@ -24,4 +24,5 @@ jobs:
       run: pytest
 
     - name: Test remove_fields.py
-      run: pytest test_remove_fields.py
+      run: |
+        pytest -v $(find tests/unit -name "*.py" -exec grep -l "pytest" {} \;)
