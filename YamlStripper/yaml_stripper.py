@@ -1,5 +1,6 @@
 import argparse
 import yaml
+import copy
 
 
 def remove_field(data, field):
@@ -29,8 +30,12 @@ def remove_fields(yaml_file, fields_to_remove, new_yaml_file):
     with open(yaml_file, 'r') as f:
         data = yaml.load(f, Loader=yaml.FullLoader)
 
+    old_yaml_data = copy.deepcopy(data)
     for field in fields_to_remove:
         remove_field(data, field)
+
+    if old_yaml_data == data:
+        return
 
     # Remove empty dictionary items
     data = {k:v for k, v in data.items() if v}
