@@ -5,12 +5,9 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-USERNAME = os.getenv('PYPI_USERNAME')
-PASSWORD = os.getenv('PYPI_PASSWORD')
-
 setuptools.setup(
     name="yaml-stripper",
-    version="2.0.1",
+    version="2.0.2",
     author="Wagner Silva",
     author_email="wra.silva@gmail.com",
     description="A command-line tool for removing specified fields from YAML files.",
